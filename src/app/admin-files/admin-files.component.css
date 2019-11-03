@@ -1,0 +1,53 @@
+.container {
+    height: 100vh;
+    margin: 0;
+    background: #f3f6f8;
+}
+
+.header {
+    height: 40px;
+    color: #c0c0c0;
+    background: #232323;
+}
+
+.header h1 {
+    margin: 0 20px;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+.menu-container {
+    float: left;
+    width: 240px;
+    height: calc(100% - 40px);
+    background: white;
+}
+
+.devui-accordion-menu {
+    box-shadow: none;
+}
+
+.option {
+    line-height: 20px;
+    vertical-align: middle;
+    margin-top: 20px;
+}
+
+.option > d-toggle {
+    display: inline-block;
+    transform: translateY(3px);
+}
+
+@media (max-width: 250px) {
+    .menu {
+        width: 80%;
+    }
+}
+
+.content {
+    float: left;
+    width: calc(100% - 280px);
+    height: calc(100% - 60px);
+    margin: 10px 20px;
+    background: white;
+}

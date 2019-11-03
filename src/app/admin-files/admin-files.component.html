@@ -1,3 +1,21 @@
-<p>
-  admin-files works!
-</p>
+<div class="container">
+
+  <div class="header">
+    <h1>华为云</h1>
+  </div>
+
+  <div class="menu-container">
+    <d-accordion
+      [data]="menu"
+      class="menu"
+      [restrictOneOpen]="restrictOneOpen"
+      (itemClick)="itemClick($event)"
+      (menuToggle)="menuToggle($event)"
+    ></d-accordion>
+  </div>
+
+  <div class="content">
+    项目成员
+  </div>
+
+</div>
