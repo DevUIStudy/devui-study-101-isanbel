@@ -23,7 +23,7 @@
     background: white;
 }
 
-.devui-accordion-menu {
+:host ::ng-deep .devui-accordion-menu {
     box-shadow: none;
 }
 
