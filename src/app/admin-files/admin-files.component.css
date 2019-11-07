@@ -10,10 +10,11 @@
     background: #232323;
 }
 
-.header h1 {
-    margin: 0 20px;
-    line-height: 40px;
-    font-size: 18px;
+.header img {
+    display: inline-block;
+    margin-left: 32px;
+    width: 73px;
+    height: 40px;
 }
 
 .menu-container {

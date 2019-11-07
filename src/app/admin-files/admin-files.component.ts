@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-files.component.css']
 })
 export class AdminFilesComponent implements OnInit {
+  headerLogo = "assets/images/header-logo.svg"
   menu = [{
     title: '通用设置',
     children: [
