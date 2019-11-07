@@ -42,7 +42,7 @@
 
 .menu-container {
     float: left;
-    width: 240px;
+    width: 200px;
     height: calc(100% - 40px);
     padding-top: 20px;
     background: white;
@@ -71,7 +71,7 @@
 
 .content {
     float: left;
-    width: calc(100% - 280px);
+    width: calc(100% - 240px);
     height: calc(100% - 60px);
     margin: 10px 20px;
     background: white;
