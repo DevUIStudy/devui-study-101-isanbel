@@ -11,5 +11,8 @@ export class AdminFilesChartComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
+  onSearch(term) {
+    console.log(term);
+  }
 }
