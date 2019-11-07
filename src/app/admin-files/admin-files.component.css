@@ -17,6 +17,23 @@
     height: 40px;
 }
 
+.header d-tabs {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    margin-left: 100px;
+    line-height: 32px;
+    z-index: 1;
+}
+
+:host ::ng-deep .header .nav-tabs a, 
+:host ::ng-deep .header .nav-tabs li, 
+:host ::ng-deep .header .nav-tabs li.active {
+    color: red;
+    border-bottom-color: red;
+}
+
+
 .menu-container {
     float: left;
     width: 240px;

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminFilesComponent implements OnInit {
   headerLogo = "assets/images/header-logo.svg"
+  tab22acticeID = 'tab1'
   menu = [{
     title: '通用设置',
     children: [
