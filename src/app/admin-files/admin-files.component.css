@@ -74,5 +74,6 @@
     width: calc(100% - 240px);
     height: calc(100% - 60px);
     margin: 10px 20px;
+    padding: 10px 20px;
     background: white;
 }

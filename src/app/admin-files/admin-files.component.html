@@ -21,7 +21,35 @@
   </div>
 
   <div class="content">
-    项目成员
+    <section>
+      <d-tabs [type]="'tabs'" [(activeTab)]="tab1acticeID">
+        <d-tab id="tab1" title="项目成员" tabId="tab1">
+          <ng-template dTabContent>
+            <app-admin-files-chart></app-admin-files-chart>
+          </ng-template>
+        </d-tab>
+    
+        <d-tab id="tab2" title="待审核" tabId="tab2">
+          <ng-template dTabContent>
+            <p>
+              Sit amet massa vitae tortor condimentum lacinia quis vel. Ac placerat
+              vestibulum lectus mauris. Et malesuada fames ac turpis egestas integer
+              eget aliquet nibh. Lectus magna fringilla urna porttitor rhoncus dolor
+              purus non. Porttitor rhoncus dolor purus non enim praesent. Felis
+              donec et odio pellentesque diam volutpat. Cras sed felis eget velit
+              aliquet sagittis id consectetur purus. Pulvinar sapien et ligula
+              ullamcorper malesuada proin. Quam lacus suspendisse faucibus interdum.
+              Eget duis at tellus at urna. Tellus mauris a diam maecenas sed.
+              Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor.
+              Sed enim ut sem viverra aliquet eget sit amet. Orci nulla pellentesque
+              dignissim enim sit amet venenatis urna cursus. Adipiscing commodo elit
+              at imperdiet dui accumsan sit amet. Enim neque volutpat ac tincidunt
+              vitae. Mauris cursus mattis molestie a iaculis at.
+            </p>
+          </ng-template>
+        </d-tab>
+      </d-tabs>
+    </section>
   </div>
 
 </div>
