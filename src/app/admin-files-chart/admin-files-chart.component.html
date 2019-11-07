@@ -6,4 +6,45 @@
       (searchFn)="onSearch($event)"
     ></d-search>
   </div>
+
+  <div class="chart">
+    <d-data-table
+      #datatable
+      [dataSource]="basicDataSource"
+      [scrollable]="true"
+      [checkable]="true"
+      [type]="'striped'"
+    >
+      <d-column
+        *ngFor="let colOption of dataTableOptions.columns"
+        [field]="colOption.field"
+        [header]="colOption.header"
+        [fieldType]="colOption.fieldType"
+        [width]="'150px'"
+      >
+      </d-column>
+      <d-column
+        [width]="'50px'"
+        [header]="'操作'"
+      >
+        <d-cell>
+          <ng-template let-rowIndex="rowIndex" let-rowItem="rowItem">
+            <div
+              class="icon icon-edit"
+              (click)="editItem(rowIndex, rowItem)"
+            ></div>
+            <div
+              class="icon icon-delete"
+              (click)="deleteItem(rowIndex, rowItem)"
+            ></div>
+          </ng-template>
+        </d-cell>
+      </d-column>
+    </d-data-table>
+    
+  </div>
+
+  <div class="bottom-bar">
+
+  </div>
 </div>

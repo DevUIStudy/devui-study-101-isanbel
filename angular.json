@@ -28,6 +28,7 @@
             ],
             "styles": [
               "node_modules/ng-devui/devui.min.css",
+              "node_modules/@devui-design/icons/icomoon/devui-icon.css",
               "src/styles.scss"
             ],
             "scripts": [],
