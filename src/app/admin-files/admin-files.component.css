@@ -33,11 +33,11 @@
     border-bottom-color: red;
 }
 
-
 .menu-container {
     float: left;
     width: 240px;
     height: calc(100% - 40px);
+    padding-top: 20px;
     background: white;
 }
 
