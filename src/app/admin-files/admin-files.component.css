@@ -33,6 +33,13 @@
     border-bottom-color: red;
 }
 
+.greeting {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    line-height: 20px;
+}
+
 .menu-container {
     float: left;
     width: 240px;
