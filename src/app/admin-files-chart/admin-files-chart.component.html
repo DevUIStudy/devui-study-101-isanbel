@@ -29,7 +29,7 @@
       >
       </d-column>
       <d-column
-        [width]="'50px'"
+        [width]="'100px'"
         [header]="'操作'"
       >
         <d-cell>
@@ -39,6 +39,7 @@
               (click)="editItem(rowIndex, rowItem)"
             ></div>
             <div
+              *ngIf="rowIndex !== 0"
               class="icon icon-delete"
               (click)="deleteItem(rowIndex, rowItem)"
             ></div>
