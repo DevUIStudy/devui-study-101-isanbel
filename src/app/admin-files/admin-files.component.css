@@ -77,3 +77,7 @@
     padding: 10px 20px;
     background: white;
 }
+
+body :host ::ng-deep .tab-content {
+    margin-top: 12px;
+}
