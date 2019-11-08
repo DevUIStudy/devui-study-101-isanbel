@@ -1,9 +1,28 @@
-d-search {
-    width: 280px;
-}
-
 .icon {
     display: inline;
+}
+
+.top-bar {
+    height: 50px;
+    d-search {
+        float: left;
+        width: 280px;
+    }
+    
+    .right {
+        float: right;
+        height: 30px;
+        .icon {
+            position: relative;
+            top: 3px;
+            margin: 0px 5px 0 10px;
+            line-height: 14px;
+        }
+        span {
+            font-size: 12px;
+            line-height: 30px;
+        }
+    }
 }
 
 .bottom-bar {
