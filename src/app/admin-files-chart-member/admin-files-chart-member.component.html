@@ -21,7 +21,7 @@
 
         <div class="buttons">
           <d-button bsStyle="primary" type="submit" [disabled]="!profileForm.valid">提交</d-button>
-          <d-button bsStyle="common">取消</d-button>
+          <d-button bsStyle="common" (click)="cancel.emit()">取消</d-button>
         </div>
       </form>
     </d-panel-body>

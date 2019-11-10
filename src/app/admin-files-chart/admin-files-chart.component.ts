@@ -15,7 +15,7 @@ export class AdminFilesChartComponent implements OnInit {
     dob: new Date(1990, 12, 1),
     gender: 'Male',
   }
-  showMemberEditor = true
+  showMemberEditor = false
 
   constructor() { }
 
@@ -67,4 +67,19 @@ export class AdminFilesChartComponent implements OnInit {
     console.log(this.pager1.pageIndex);
   }
 
+  addMember() {
+    this.showMemberEditor = true
+  }
+
+  onMemberSubmit() {
+    this.hideMemberEditor()
+  }
+
+  onMemberCancel() {
+    this.hideMemberEditor()
+  }
+
+  hideMemberEditor() {
+    this.showMemberEditor = false
+  }
 }

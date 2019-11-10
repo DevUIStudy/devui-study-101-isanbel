@@ -6,7 +6,7 @@
       (searchFn)="onSearch($event)"
     ></d-search>
     <div class="right">
-      <d-button icon="icon-add-member" bsStyle="text-dark">
+      <d-button icon="icon-add-member" bsStyle="text-dark" (click)="addMember()">
         添加成员
       </d-button>
       <d-button icon="icon-qrcode" bsStyle="text-dark">
@@ -82,5 +82,11 @@
     </div>
   </div>
 
-  <app-admin-files-chart-member [member]="member" [show]="showMemberEditor"></app-admin-files-chart-member>
+  <app-admin-files-chart-member
+    [member]="member"
+    [show]="showMemberEditor"
+    (submit)="onMemberSubmit()"
+    (cancel)="onMemberCancel()"
+  >
+  </app-admin-files-chart-member>
 </div>
