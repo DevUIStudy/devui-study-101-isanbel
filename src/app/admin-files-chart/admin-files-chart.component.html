@@ -21,7 +21,7 @@
   <div class="chart">
     <d-data-table
       #datatable
-      [dataSource]="basicDataSource"
+      [dataSource]="getBasicDataSource()"
       [scrollable]="true"
       [checkable]="true"
       [type]="'striped'"
@@ -89,6 +89,4 @@
     (cancel)="onMemberCancel()"
   >
   </app-admin-files-chart-member>
-
-  {{members.length}}
 </div>

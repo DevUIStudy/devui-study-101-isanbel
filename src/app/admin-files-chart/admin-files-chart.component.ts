@@ -18,41 +18,45 @@ export class AdminFilesChartComponent implements OnInit {
     gender: 'Male',
   }
   showMemberEditor = false
-  basicDataSource: Array<SourceType> = JSON.parse(JSON.stringify(originSource.slice(0, 6)));
+  // basicDataSource: Array<SourceType> = JSON.parse(JSON.stringify(originSource.slice(0, 6)));
   dataTableOptions = {
     columns: [
         {
             field: 'firstName',
-            header: '用户名称',
+            header: '名字',
             fieldType: 'text'
         },
         {
             field: 'lastName',
-            header: '昵称',
+            header: '姓氏',
             fieldType: 'text'
         },
         {
             field: 'gender',
-            header: '项目角色',
+            header: '性别',
             fieldType: 'text'
         },
         {
             field: 'dob',
-            header: 'Dob',
+            header: '入项时间',
             fieldType: 'date'
         }
     ]
   };
-  
   pager1 = {
     total: 100,
     pageIndex: 1,
     pageSize: 10
   };
+  
   constructor(
     private contactService: ContactService
   ) {
     this.members = this.contactService.getMembers();
+  }
+
+  getBasicDataSource() {
+    return JSON.parse(JSON.stringify(this.members));
   }
 
   ngOnInit() {
