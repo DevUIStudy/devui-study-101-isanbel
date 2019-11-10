@@ -11,7 +11,7 @@ import { ContactService } from '../contact.service';
 export class AdminFilesChartComponent implements OnInit {
   members;
   member: Member = {
-    id: 1,
+    id: 0,
     firstName: '',
     lastName: '',
     dob: new Date(1990, 12, 1),
@@ -48,7 +48,7 @@ export class AdminFilesChartComponent implements OnInit {
     pageIndex: 1,
     pageSize: 10
   };
-  
+
   constructor(
     private contactService: ContactService
   ) {
@@ -96,5 +96,11 @@ export class AdminFilesChartComponent implements OnInit {
 
   hideMemberEditor() {
     this.showMemberEditor = false
+  }
+
+  editItem(rowIndex, rowItem) {
+    this.member = this.members[rowIndex]
+    console.log(this.member)
+    this.showMemberEditor = true
   }
 }

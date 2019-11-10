@@ -33,10 +33,15 @@ export class AdminFilesChartMemberComponent implements OnInit {
     // HACK: I have no idea why the output submit is emitted.
   }
 
-  addToContact(member) {
-    if (member.firstName === '' || member.lastName === '')
+  addToContact(profileForm) {
+    if (profileForm.profileForm === '' || profileForm.lastName === '')
       return
-    member.id = this.contactService.getMembers().length + 1
+    let member = this.member
+    member.id = member.id ? member.id : this.contactService.getMembers().length + 1
+    member.firstName = profileForm.firstName
+    member.lastName = profileForm.lastName
+    member.gender = profileForm.gender
+    console.log(member.id)
     member.dob = new Date()
     this.contactService.addToContact(member);
   }

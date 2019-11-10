@@ -7,7 +7,12 @@ export class ContactService {
   contact = []
 
   addToContact(member) {
-    this.contact.push(member);
+    // update if existed
+    let index = this.contact.map(x => x.id).indexOf(member.id)
+    if (index < 0)
+      this.contact.push(member);
+    else
+      this.contact[index] = member
   }
 
   getMembers() {
