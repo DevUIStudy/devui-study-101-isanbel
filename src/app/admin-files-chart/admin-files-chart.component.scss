@@ -57,3 +57,7 @@
         }
     }
 }
+/* .dropdown, .dropup z-index 出奇的高 */
+:host ::ng-deep .dropdown, :host ::ng-deep .dropup {
+    z-index: 0;
+}
