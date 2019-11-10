@@ -15,6 +15,7 @@ export class AdminFilesChartComponent implements OnInit {
     dob: new Date(1990, 12, 1),
     gender: 'Male',
   }
+  showMemberEditor = true
 
   constructor() { }
 

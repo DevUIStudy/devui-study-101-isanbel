@@ -1,0 +1,30 @@
+<div class="container" *ngIf="show">
+
+  <d-panel>
+    <d-panel-body>
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+        <label>
+          First Name:
+          <input type="text" formControlName="firstName">
+        </label>
+      
+        <label>
+          Last Name:
+          <input type="text" formControlName="lastName">
+        </label>
+
+        <label>
+          Gender:
+          <input type="text" formControlName="gender">
+        </label>
+
+        <div class="buttons">
+          <d-button bsStyle="primary" type="submit" [disabled]="!profileForm.valid">提交</d-button>
+          <d-button bsStyle="common">取消</d-button>
+        </div>
+      </form>
+    </d-panel-body>
+  </d-panel>
+
+</div>
