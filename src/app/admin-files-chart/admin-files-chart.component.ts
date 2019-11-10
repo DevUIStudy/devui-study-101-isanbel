@@ -14,7 +14,7 @@ export class AdminFilesChartComponent implements OnInit {
     id: 0,
     firstName: '',
     lastName: '',
-    dob: new Date(1990, 12, 1),
+    dob: new Date(),
     gender: 'Male',
   }
   showMemberEditor = false
@@ -83,6 +83,7 @@ export class AdminFilesChartComponent implements OnInit {
   }
 
   addMember() {
+    this.clearMember()
     this.showMemberEditor = true
   }
 
@@ -98,9 +99,23 @@ export class AdminFilesChartComponent implements OnInit {
     this.showMemberEditor = false
   }
 
+  clearMember() {
+    this.member = {
+      id: 0,
+      firstName: '',
+      lastName: '',
+      dob: new Date(),
+      gender: 'Male',
+    }
+  }
+
   editItem(rowIndex, rowItem) {
     this.member = this.members[rowIndex]
-    console.log(this.member)
     this.showMemberEditor = true
+  }
+
+  deleteItem(rowIndex, rowItem) {
+    this.member = this.members[rowIndex]
+    this.contactService.deleteMemberById(this.member.id)
   }
 }

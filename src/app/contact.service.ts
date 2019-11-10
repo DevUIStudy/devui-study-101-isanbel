@@ -25,4 +25,10 @@ export class ContactService {
       return contactSatisfied[0]
     return null
   }
+
+  deleteMemberById(id) {
+    let index = this.contact.map(x => x.id).indexOf(id)
+    if (index >= 0)
+      this.contact.splice(index, 1)
+  }
 }
