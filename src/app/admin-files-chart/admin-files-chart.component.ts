@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SourceType, originSource } from './mock-data.js';
+import { Member } from '../member';
 
 @Component({
   selector: 'app-admin-files-chart',
@@ -7,6 +8,13 @@ import { SourceType, originSource } from './mock-data.js';
   styleUrls: ['./admin-files-chart.component.scss']
 })
 export class AdminFilesChartComponent implements OnInit {
+  member: Member = {
+    id: 1,
+    firstName: '',
+    lastName: '',
+    dob: new Date(1990, 12, 1),
+    gender: 'Male',
+  }
 
   constructor() { }
 
