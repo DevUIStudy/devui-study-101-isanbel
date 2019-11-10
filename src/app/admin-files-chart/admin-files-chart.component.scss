@@ -1,6 +1,7 @@
 .icon {
     display: inline;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .top-bar {
@@ -13,15 +14,11 @@
     .right {
         float: right;
         height: 30px;
-        .icon {
-            position: relative;
-            top: 3px;
-            margin: 0px 5px 0 10px;
-            line-height: 14px;
-        }
-        span {
-            font-size: 12px;
+        d-button {
             line-height: 30px;
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
         }
     }
 }
